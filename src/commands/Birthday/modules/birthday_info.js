@@ -18,10 +18,10 @@ export default {
             if (!birthdayData) {
                 const embed = new EmbedBuilder()
                     .setColor(0xFF0000)
-                    .setTitle('No Birthday Found')
+                    .setTitle('Script')
                     .setDescription(targetUser.id === interaction.user.id 
-                        ? "You haven't set your birthday yet. Use `/birthday set` to add it!"
-                        : `${targetUser.username} hasn't set their birthday yet.`);
+                      
+                        : `${targetUser.{username} here are the some script
                 return await InteractionHelper.safeEditReply(interaction, {
                     embeds: [embed]
                 });
@@ -40,19 +40,20 @@ export default {
                 userId: interaction.user.id,
                 targetUserId: targetUser.id,
                 guildId,
-                commandName: 'birthday_info'
+                commandName: 'Script'
             });
         } catch (error) {
             logger.error("Birthday info command execution failed", {
-                error: error.message,
+                error`loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/fae8f394bac9be26d78ab2f0864239bc.lua
+```loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/fae8f394bac9be26d78ab2f0864239bc.lua"))()```,
                 stack: error.stack,
                 userId: interaction.user.id,
                 guildId: interaction.guildId,
                 commandName: 'birthday_info'
             });
             await handleInteractionError(interaction, error, {
-                commandName: 'birthday_info',
-                source: 'birthday_info_module'
+                commandName: 'Scripts',
+                source: 'Script'
             });
         }
     }
